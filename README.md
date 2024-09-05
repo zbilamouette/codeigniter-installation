@@ -5,11 +5,59 @@
 
 ## Prérequis
 
-- PHP version 7.4 ou supérieure
 - Composer installé
 - Extension `intl` activée dans votre fichier `php.ini` du dossier d'installation de PHP
 
 
+## Introduction
+
+### Introduction à CodeIgniter
+
+CodeIgniter est un framework PHP léger et performant, conçu pour les développeurs souhaitant créer des applications web rapides et robustes. Il est reconnu pour sa simplicité, sa documentation complète, et son architecture MVC (Modèle-Vue-Contrôleur), ce qui permet de structurer efficacement le code.
+
+Ce framework est idéal pour ceux qui recherchent un environnement de développement agile, avec une courbe d'apprentissage rapide, tout en offrant des outils puissants pour des applications de petite à grande échelle.
+
+### Objectif de ce manuel
+
+Ce manuel d'utilisation a pour but de guider les utilisateurs à travers les étapes d'installation, de configuration et de déploiement de CodeIgniter, que ce soit en environnement de développement local ou sur un serveur de production. Vous y trouverez des instructions détaillées, des bonnes pratiques, ainsi que des conseils pour tirer le meilleur parti de CodeIgniter lors de vos projets de développement web.
+
+## Installation de Composer
+
+Composer est un gestionnaire de dépendances pour PHP, essentiel pour installer et gérer les packages nécessaires dans votre projet. Suivez ces étapes pour installer Composer.
+
+### Étape 1 : Téléchargement de Composer
+
+1. Rendez-vous sur le site officiel de Composer : [https://getcomposer.org](https://getcomposer.org)
+2. Cliquez sur le bouton **Download**.
+
+![Téléchargement de Composer](https://getcomposer.org/img/logo-composer-transparent5.png)
+
+### Étape 2 : Installation de Composer (Windows)
+
+1. Téléchargez et exécutez l'installeur Composer pour Windows disponible [ici](https://getcomposer.org/Composer-Setup.exe).
+2. Suivez les instructions à l'écran pour terminer l'installation. L'assistant d'installation détectera automatiquement l'emplacement de votre exécutable PHP, mais vous pouvez le spécifier manuellement si nécessaire.
+
+![Installation de Composer sur Windows](https://getcomposer.org/img/composer-console.gif)
+
+### Étape 3 : Vérification de l'installation
+
+Pour vérifier que Composer est correctement installé, ouvrez une fenêtre de terminal (CMD ou PowerShell sous Windows, Terminal sous macOS ou Linux) et tapez la commande suivante :
+
+```bash
+composer
+```
+
+Si Composer est installé correctement, vous verrez un écran similaire à celui-ci :
+
+![Vérification de Composer](https://getcomposer.org/img/composer-check.png)
+
+###  Étape 4 : Configuration de Composer
+
+Une fois l'installation terminée, Composer est prêt à être utilisé. Vous pouvez configurer des alias ou ajuster vos paramètres de proxy si nécessaire.
+
+---
+
+Ces étapes illustrées devraient vous aider à installer Composer facilement.
 
 ## Installation de CodeIgniter
 
@@ -143,10 +191,31 @@ php spark serve --port 8081
 php spark serve --php /usr/bin/php7.6.5.4
 ```
 
-## Déploiement sur un serveur Apache
+## Déploiement de CodeIgniter sur un serveur WAMP
 
-Pour déployer votre application sur un serveur Apache, assurez-vous de donner les bonnes permissions d'écriture à vos dossiers.
+Pour déployer CodeIgniter sur un serveur WAMP, suivez les étapes suivantes :
 
----
+### Étape 1 : Télécharger CodeIgniter
 
-Cela devrait rendre vos notes plus structurées et claires pour une utilisation.
+1. Rendez-vous sur le site officiel de CodeIgniter : [https://codeigniter.com](https://codeigniter.com).
+2. Cliquez sur **Download** pour télécharger la dernière version sous forme de fichier `.zip`.
+
+### Étape 2 : Extraire le fichier dans le répertoire WAMP
+
+1. Une fois le fichier téléchargé, extrayez son contenu.
+2. Copiez le dossier extrait (généralement nommé `CodeIgniter-4.x.x`) et placez-le dans le répertoire `www` de WAMP. Le chemin par défaut du répertoire `www` est :
+
+   ```bash
+   C:\wamp64\www
+   ```
+
+3. Renommez le dossier de votre projet comme vous le souhaitez (par exemple, `mon_projet_ci`).
+
+### Étape 3 : Accéder à votre projet
+
+1. Ouvrez WAMP et démarrez les services Apache et MySQL.
+2. Accédez à votre projet via l'URL suivante dans votre navigateur :
+
+   ```bash
+   http://localhost/mon_projet_ci
+   ```
