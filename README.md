@@ -9,6 +9,8 @@
 - Composer installé
 - Extension `intl` activée dans votre fichier `php.ini` du dossier d'installation de PHP
 
+
+
 ## Installation de CodeIgniter
 
 ### Option 1 : Créer un projet via Composer
@@ -18,9 +20,13 @@ Pour installer CodeIgniter, exécutez la commande suivante pour créer un nouvea
 ```bash
 composer create-project codeigniter4/appstarter project-root
 ```
+![Create project](./img/composer_create-project.png)
 
-![Create  error](./img/composer_create-project_error.png)
-x
+> **Remarque :** Si vous avec l'erreur suivante, c'est que l'extension `intl` n'est pas activée dans le fichier `php.ini`. Il suffira de retirer le `;` du début de ligne.
+![intl Extension](./img/intl-extension.png)
+![Create project error](./img/composer_create-project_error.png)
+
+
 
 Si vous modifiez manuellement le fichier `composer.json`, veillez à spécifier la version de CodeIgniter souhaitée :
 
@@ -48,6 +54,9 @@ composer create-project codeigniter4/appstarter:4.4.8 project-root
 ```
 
 
+A la fin de l'installation, on devrait retrouver les dossiers ci-contre :
+![Project tree](./img/tree.png)
+
 ## Configuration de l'application
 
 Après avoir installé CodeIgniter, il y a quelques configurations importantes à réaliser.
@@ -59,6 +68,7 @@ Allez dans le fichier `app/Config/App.php` et modifiez la variable `$baseUrl` po
 ```php
 public $baseURL = 'http://localhost:8080/';
 ```
+![Base URL](./img/base_url.png)
 
 ### Suppression de `index.php` dans l'URL
 
@@ -67,10 +77,12 @@ Dans le même fichier, modifiez la variable `$indexPage` pour supprimer le `inde
 ```php
 public $indexPage = '';
 ```
+![Index Page](./img/indexpage.png)
 
 ### Configurer la base de données
 
 Rendez-vous dans le fichier `app/Config/Database.php` pour configurer votre connexion à la base de données.
+![DB Settings](./img/settings_db.png)
 
 ### Activer le mode développement
 
@@ -79,6 +91,8 @@ Dupliquez le fichier `env` à la racine du projet en `.env`, puis dans le fichie
 ```bash
 CI_ENVIRONMENT = development
 ```
+![Development Environment](./img/environment_development.png)
+![Development Production](./img/environment_production.png)
 
 ## Vérification des configurations PHP
 
@@ -103,6 +117,7 @@ php spark serve
 ```
 
 L'application sera disponible à l'URL configurée dans `$baseUrl`. Si vous avez activé le mode développement, l'environnement actuel sera indiqué en bas de la page.
+![Environment Development](./img/display_development-environment.png)
 
 ### Personnaliser l'hôte ou le port
 
@@ -111,14 +126,16 @@ Vous pouvez personnaliser l'hôte ou le port du serveur avec les commandes suiva
 - Spécifier un hôte :
 
 ```bash
-php spark serve --host example.dev
+php spark serve --host localhost
 ```
+![PHP serve localhost](./img/php_serve_localhost.png)
 
 - Spécifier un port :
 
 ```bash
 php spark serve --port 8081
 ```
+![PHP serve port 8081](./img/php_serve_port-8081.png)
 
 - Utiliser une version spécifique de PHP :
 
