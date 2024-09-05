@@ -3,6 +3,14 @@
 
 # Installation de CodeIgniter
 
+## Plan
+
+- Introduction
+- Installation de Composer
+- Installation de CodeIgniter
+- Déploiement de CodeIgniter sur un serveur WAMP 
+
+
 ## Prérequis
 
 - Composer installé
@@ -30,14 +38,10 @@ Composer est un gestionnaire de dépendances pour PHP, essentiel pour installer 
 1. Rendez-vous sur le site officiel de Composer : [https://getcomposer.org](https://getcomposer.org)
 2. Cliquez sur le bouton **Download**.
 
-![Téléchargement de Composer](https://getcomposer.org/img/logo-composer-transparent5.png)
-
 ### Étape 2 : Installation de Composer (Windows)
 
 1. Téléchargez et exécutez l'installeur Composer pour Windows disponible [ici](https://getcomposer.org/Composer-Setup.exe).
 2. Suivez les instructions à l'écran pour terminer l'installation. L'assistant d'installation détectera automatiquement l'emplacement de votre exécutable PHP, mais vous pouvez le spécifier manuellement si nécessaire.
-
-![Installation de Composer sur Windows](https://getcomposer.org/img/composer-console.gif)
 
 ### Étape 3 : Vérification de l'installation
 
@@ -47,9 +51,6 @@ Pour vérifier que Composer est correctement installé, ouvrez une fenêtre de t
 composer
 ```
 
-Si Composer est installé correctement, vous verrez un écran similaire à celui-ci :
-
-![Vérification de Composer](https://getcomposer.org/img/composer-check.png)
 
 ###  Étape 4 : Configuration de Composer
 
