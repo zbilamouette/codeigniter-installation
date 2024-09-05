@@ -19,9 +19,8 @@ Pour installer CodeIgniter, exécutez la commande suivante pour créer un nouvea
 composer create-project codeigniter4/appstarter project-root
 ```
 
-![Create project error](/codeigniter-installation/assets/composer_create-project_error.png)
+![Create project error](./docs/assets/composer_create-project_error.png)
 
-![](DSC00893.JPG)
 
 Si vous modifiez manuellement le fichier `composer.json`, veillez à spécifier la version de CodeIgniter souhaitée :
 
