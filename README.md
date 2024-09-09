@@ -1,11 +1,12 @@
 
 ---
 
-# Installation de CodeIgniter
+# Installation de CodeIgniter sur Windows
 
 ## Plan
 
 - Introduction
+- Installation de PHP
 - Installation de Composer
 - Installation de CodeIgniter
 - Déploiement de CodeIgniter sur un serveur WAMP 
@@ -22,6 +23,47 @@ Ce framework est idéal pour ceux qui recherchent un environnement de développe
 ### Objectif de ce manuel
 
 Ce manuel d'utilisation a pour but de guider les utilisateurs à travers les étapes d'installation, de configuration et de déploiement de CodeIgniter, que ce soit en environnement de développement local ou sur un serveur de production. Vous y trouverez des instructions détaillées, des bonnes pratiques, ainsi que des conseils pour tirer le meilleur parti de CodeIgniter lors de vos projets de développement web.
+
+
+## Installation de PHP
+
+Avant d'installer CodeIgniter, vous devez installer PHP sur votre machine. PHP est le langage serveur utilisé par CodeIgniter et doit être configuré correctement.
+
+### Étape 1 : Télécharger PHP
+
+1. Rendez-vous sur le site officiel de PHP : [https://windows.php.net/download](https://windows.php.net/download).
+2. Sous la section "Thread Safe", choisissez la version stable la plus récente de PHP compatible avec CodeIgniter (PHP 7.4 ou plus est recommandé).
+3. Téléchargez le fichier ZIP approprié pour votre version de Windows (généralement x64).
+
+### Étape 2 : Installation de PHP
+
+1. Extrayez l'archive ZIP téléchargée dans un dossier de votre choix, par exemple `C:\php`.
+2. Dans le dossier `C:\php`, renommez le fichier `php.ini-development` en `php.ini`. Ce fichier contient les configurations de base de PHP.
+3. Ouvrez le fichier `php.ini` avec un éditeur de texte et recherchez la ligne suivante :
+   ```ini
+   ;extension=intl
+   ```
+   Supprimez le point-virgule `;` au début de cette ligne pour activer l'extension `intl` (nécessaire pour CodeIgniter). Vous pouvez également activer d'autres extensions PHP si besoin, comme `pdo_mysql` pour les connexions à une base de données MySQL.
+
+### Étape 3 : Configurer la variable d'environnement
+
+1. Ouvrez les **Paramètres système avancés** de Windows (cliquez sur "Démarrer", tapez "paramètres système avancés" et sélectionnez-le).
+2. Cliquez sur **Variables d'environnement** en bas de la fenêtre.
+3. Dans la section **Variables système**, recherchez la variable `Path`, sélectionnez-la et cliquez sur **Modifier**.
+4. Cliquez sur **Nouveau** et ajoutez le chemin vers le dossier où PHP est installé (par exemple, `C:\php`).
+5. Cliquez sur **OK** pour enregistrer les modifications.
+
+### Étape 4 : Vérifier l'installation
+
+1. Ouvrez une fenêtre **CMD** ou **PowerShell**.
+2. Tapez la commande suivante pour vérifier que PHP est correctement installé :
+
+   ```bash
+   php -v
+   ```
+
+   Si PHP est installé correctement, vous verrez la version de PHP affichée dans la console.
+
 
 ## Installation de Composer
 
