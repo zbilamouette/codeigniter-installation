@@ -11,12 +11,6 @@
 - Déploiement de CodeIgniter sur un serveur WAMP 
 
 
-## Prérequis
-
-- Composer installé
-- Extension `intl` activée dans votre fichier `php.ini` du dossier d'installation de PHP
-
-
 ## Introduction
 
 ### Introduction à CodeIgniter
@@ -51,15 +45,6 @@ Pour vérifier que Composer est correctement installé, ouvrez une fenêtre de t
 composer
 ```
 
-
-###  Étape 4 : Configuration de Composer
-
-Une fois l'installation terminée, Composer est prêt à être utilisé. Vous pouvez configurer des alias ou ajuster vos paramètres de proxy si nécessaire.
-
----
-
-Ces étapes illustrées devraient vous aider à installer Composer facilement.
-
 ## Installation de CodeIgniter
 
 ### Option 1 : Créer un projet via Composer
@@ -71,13 +56,13 @@ composer create-project codeigniter4/appstarter project-root
 ```
 ![Create project](./img/composer_create-project.png)
 
-> **Remarque :** Si vous avec l'erreur suivante, c'est que l'extension `intl` n'est pas activée dans le fichier `php.ini`. Il suffira de retirer le `;` du début de ligne.
+> **Remarque :** Si vous avec l'erreur suivante, c'est que l'extension `intl` n'est pas activée dans le fichier `C:\Program Files\PHP\php.ini`. Il suffira de retirer le `;` du début de ligne.
 ![intl Extension](./img/intl-extension.png)
 ![Create project error](./img/composer_create-project_error.png)
 
 
 
-Si vous modifiez manuellement le fichier `composer.json`, veillez à spécifier la version de CodeIgniter souhaitée :
+Si vous souhaitez modifier manuellement la version de CodeIgniter, il faut modifier le fichier `composer.json` :
 
 ```json
 "require": {
