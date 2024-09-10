@@ -186,7 +186,7 @@ CheckPhpIni::run(false);
 
 ## Lancer le serveur de développement
 
-Pour lancer le serveur de développement, exécutez la commande suivante :
+Pour lancer le serveur de développement, se placer dans le dossier du projet et exécutez la commande suivante :
 
 ```bash
 php spark serve
